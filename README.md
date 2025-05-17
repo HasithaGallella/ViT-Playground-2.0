@@ -18,7 +18,7 @@
   - ✅ Inference and testing on CPU-only machines, including macOS (Tested on M4 MacBook)
 
 - 🚀 **Built with PyTorch**  
-  Utilizes native from scratch PyTorch modules and CUDA acceleration when available. With many test implimentations like How Backpropagation works.
+  It utilizes native, from-scratch PyTorch modules and CUDA acceleration when available, with many test example implementations, such as How Backpropagation Works for transformer parameter updates at the low level.
 
 ---
 
