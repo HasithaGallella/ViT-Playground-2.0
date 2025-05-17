@@ -54,35 +54,38 @@ You can install the dependencies via:
 
 ```bash
 pip install -r requirements.txt
+```
 
-
-⸻
+---
 
 📌 Notes
 	•	This repository is actively evolving.
 	•	It is tailored for my own research and experimentation but kept general enough for others to adapt.
 
-⸻
+---
 
 🖥️ Example Usage
 
 Train locally:
 
+```bash
 python train.py --fname configs/vit_base.yaml
+```
 
 Train on multiple GPUs:
 
+```bash
 python -m torch.distributed.launch --nproc_per_node=8 main_distributed.py --fname configs/vit_large.yaml
+```
 
-
-⸻
+---
 
 🧑‍💻 Author
 
 Maintained by Hasitha Gallella.
 If you find this useful or have suggestions, feel free to open an issue or a pull request.
 
-⸻
+---
 
 📜 License
 
