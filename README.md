@@ -83,6 +83,7 @@ python -m torch.distributed.launch --nproc_per_node=8 main_distributed.py --fnam
 🧑‍💻 Author
 
 Maintained by Hasitha Gallella.
+
 If you find this useful or have suggestions, feel free to open an issue or a pull request.
 
 ---
