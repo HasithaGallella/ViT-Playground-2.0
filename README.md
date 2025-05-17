@@ -15,7 +15,7 @@
 - ⚙️ **Multi-Device Compatibility**  
   - ✅ Scalable training on SLURM-based HPC environments (e.g., worked on 640GB 8× A100 GPU cluster)
   - ✅ Fine-tuning on mid-range GPUs (e.g., worked on 6GB RTX 2060 Windows PC)  
-  - ✅ Inference and low level module testing on CPU-only machines, including macOS (Tested on M4 MacBook)
+  - ✅ Inference and low-level module testings on CPU-only machines, including macOS (Tested on M4 MacBook)
 
 - 🚀 **Built with PyTorch**  
   It utilizes native, from-scratch PyTorch modules and CUDA acceleration when available, with many test example implementations, such as How Backpropagation Works for transformer parameter updates at the low level.
