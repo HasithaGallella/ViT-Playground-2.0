@@ -1,2 +1,91 @@
 # ViT-Playground-2.0
-A practical and flexible testbed for Vision Transformers and other large Transformer backbones for training, fine-tuning, LoRA-PEFT, testing, and debugging. This is my personal test codebase, supporting everything from high-end A100 multi-GPU clusters, SLURM-based HPC environments to simple debugging on my local M4 MacBook CPU-only setups.
+
+**ViT-Playground-2.0** is a personal and practical environment designed for training, fine-tuning, LoRA-PEFT, testing, and experimenting with Vision Transformers (ViTs) and other large Transformer backbones. Built on PyTorch and CUDA, this repository supports workflows ranging from large-scale A100 multi-GPU cluster training to lightweight inference on personal CPU only devices.
+
+---
+
+## ✨ Features
+
+- 🧠 **Train and Fine-tune Vision Transformers**  
+  Includes support for standard supervised learning, unsupervised masking methods and lightweight fine-tuning methods like LoRA.
+
+- 🔧 **Modular Architecture**  
+  Easily extend or modify transformer components using subclass-based design.
+
+- ⚙️ **Multi-Device Compatibility**  
+  - ✅ Scalable training on SLURM-based HPC environments (e.g., worked on 8× A100 GPU cluster)
+  - ✅ Fine-tuning on mid-range GPUs (e.g., worked on RTX 2060 Windows)  
+  - ✅ Inference and testing on CPU-only machines, including macOS (Tested on M4 MacBook)
+
+- 🚀 **Built with PyTorch**  
+  Utilizes native from scratch PyTorch modules and CUDA acceleration when available. With many test implimentations like How Backpropagation works.
+
+---
+
+## 📁 Project Structure
+
+ViT-Playground-2.0/
+├── src/                 # Core model architecture and utilities
+├── train.py             # Entry point for local training
+├── main_distributed.py  # Entry point for multi-GPU (e.g., Slurm) training
+├── inference.py         # Inference/testing utilities
+├── configs/             # YAML config files for various experiments
+└── data/                # Dataset loading and preparation
+
+---
+
+## 🧪 Use Cases
+
+This repo serves as my **testbed for Vision Transformer backbones**. It is actively used to:
+
+- Evaluate different backbone variants under controlled settings
+- Compare training behaviors across devices and scales
+- Prototype new transformer modules or fine-tuning strategies
+
+---
+
+## 🔧 Requirements
+
+- Python ≥ 3.8
+- PyTorch ≥ 2.0
+- CUDA (for GPU acceleration)
+
+You can install the dependencies via:
+
+```bash
+pip install -r requirements.txt
+
+
+⸻
+
+📌 Notes
+	•	This repository is actively evolving.
+	•	It is tailored for my own research and experimentation but kept general enough for others to adapt.
+
+⸻
+
+🖥️ Example Usage
+
+Train locally:
+
+python train.py --fname configs/vit_base.yaml
+
+Train on multiple GPUs:
+
+python -m torch.distributed.launch --nproc_per_node=8 main_distributed.py --fname configs/vit_large.yaml
+
+
+⸻
+
+🧑‍💻 Author
+
+Maintained by Hasitha Gallella.
+If you find this useful or have suggestions, feel free to open an issue or a pull request.
+
+⸻
+
+📜 License
+
+This project is released under the MIT License.
+
+Let me know if you have any sudgestions to include to make this a more practicle codebase to explore Deep learning framework!
